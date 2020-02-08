@@ -14,13 +14,6 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('extension.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World!');
-	});
-
 	// Convert the selected text to dot notation - e.g. convert this/is/a/path to this.is.a.path
 	let dotnotation = vscode.commands.registerCommand('extension.dotnotation', () => {
 		let editor = vscode.window.activeTextEditor;
@@ -29,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
 			let document = editor.document;
 			let selection = editor.selection;
 
-			// Get the word within the selection
+			// Get the text of the selection
 			let textSelection = document.getText(selection);
 			let dotnotation = textSelection.split('/').join('.');
 			editor.edit(editBuilder => {
@@ -38,10 +31,9 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 	});
 
-	context.subscriptions.push(disposable);
 	context.subscriptions.push(dotnotation);
 
-	/* XPath Features */
+	// Function for getting the current XPath of an XML document
     context.subscriptions.push(
         vscode.commands.registerTextEditorCommand('extension.getCurrentXPath', getCurrentXPath)
     );

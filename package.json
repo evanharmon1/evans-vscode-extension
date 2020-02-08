@@ -10,17 +10,12 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld",
 		"onCommand:extension.dotnotation",
 		"onCommand:extension.getCurrentXPath"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
-			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
-			},
 			{
 				"command": "extension.dotnotation",
 				"title": "Dot Notation"

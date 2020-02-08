@@ -15,6 +15,7 @@ export function getCurrentXPath(editor: TextEditor, edit: TextEditorEdit): void 
     const document = new DOMParser().parseFromString(editor.document.getText());
     const xpath = new XPathBuilder(document).build(editor.selection.start);
     
+    // Copy the generated XPath to the user's clipboard
     vscode.env.clipboard.writeText(xpath);
 
     window.showInputBox({

@@ -1,6 +1,5 @@
 import { Position } from "vscode";
 import { DOMParser } from "xmldom";
-
 import { XmlTraverser } from "./xml-traverser";
 
 export class XPathBuilder {
