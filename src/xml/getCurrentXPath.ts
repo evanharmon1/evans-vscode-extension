@@ -1,5 +1,6 @@
 import { window } from "vscode";
 import { TextEditor, TextEditorEdit } from "vscode";
+import * as vscode from 'vscode';
 import { DOMParser } from "xmldom";
 
 import { XPathBuilder } from "./xpath-builder";
@@ -13,6 +14,8 @@ export function getCurrentXPath(editor: TextEditor, edit: TextEditorEdit): void 
 
     const document = new DOMParser().parseFromString(editor.document.getText());
     const xpath = new XPathBuilder(document).build(editor.selection.start);
+    
+    vscode.env.clipboard.writeText(xpath);
 
     window.showInputBox({
         value: xpath,
