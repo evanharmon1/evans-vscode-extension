@@ -11,7 +11,8 @@
 	],
 	"activationEvents": [
 		"onCommand:extension.helloWorld",
-		"onCommand:extension.dotnotation"
+		"onCommand:extension.dotnotation",
+		"onCommand:extension.getCurrentXPath"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -23,7 +24,11 @@
 			{
 				"command": "extension.dotnotation",
 				"title": "Dot Notation"
-			}
+			},
+			{
+                "command": "extension.getCurrentXPath",
+                "title": "Get Current XPath"
+            }
 		]
 	},
 	"scripts": {
@@ -46,5 +51,10 @@
 		"mocha": "^7.0.1",
 		"typescript": "^3.7.5",
 		"vscode-test": "^1.3.0"
+	},
+	"dependencies": {
+		"@types/xmldom": "^0.1.29",
+		"xmldom": "^0.2.1",
+		"xpath": "0.0.27"
 	}
 }
