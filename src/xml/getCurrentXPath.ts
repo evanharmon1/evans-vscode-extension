@@ -17,6 +17,7 @@ export function getCurrentXPath(editor: TextEditor, edit: TextEditorEdit): void 
     
     // Copy the generated XPath to the user's clipboard
     vscode.env.clipboard.writeText(xpath);
+    window.showInformationMessage("XPath copied to your clipboard.");
 
     window.showInputBox({
         value: xpath,
