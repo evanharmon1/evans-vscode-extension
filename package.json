@@ -10,20 +10,35 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.dotnotation",
-		"onCommand:extension.getCurrentXPath"
+		"onCommand:extension.dotNotation",
+		"onCommand:extension.getCurrentXPath",
+		"onCommand:extension.splitTextIntoFilesUserInput",
+		"onCommand:extension.splitTextIntoDoubleNewLine",
+		"onCommand:extension.splitTextIntoTripleNewLine"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.dotnotation",
-				"title": "Dot Notation"
+				"command": "extension.dotNotation",
+				"title": "Evan's: Dot Notation"
 			},
 			{
                 "command": "extension.getCurrentXPath",
-                "title": "Get Current XPath"
-            }
+                "title": "Evan's: Get Current XPath"
+            },
+			{
+				"command": "extension.splitTextIntoFilesUserInput",
+				"title": "Evan's: Splint Text Into Files From User Input"
+			},
+			{
+				"command": "extension.splitTextIntoDoubleNewLine",
+				"title": "Evan's: Splint Text Into Files On Double New Lines"
+			},
+			{
+				"command": "extension.splitTextIntoTripleNewLine",
+				"title": "Evan's: Splint Text Into Files On Triple New Lines"
+			}
 		]
 	},
 	"scripts": {
