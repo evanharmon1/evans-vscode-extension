@@ -2,7 +2,8 @@
 	"name": "evans-vscode-extension",
 	"displayName": "Evan's",
 	"description": "An extension with various utilities I find useful for coding",
-	"version": "0.0.1",
+	"version": "0.0.2",
+	"repository": "https://github.com/evanharmon1/evans-vscode-extension",
 	"engines": {
 		"vscode": "^1.42.0"
 	},
